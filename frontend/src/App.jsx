@@ -10,7 +10,9 @@ import { AuthContext } from '../context/AuthContext.jsx'
 const App = () => {
 const { authUser } = useContext(AuthContext)
   return (
-    <div className="bg-[url('/bgImage.jpg')] bg-contain">
+    // <div className="bg-[url('/bgImage.jpg')] bg-contain">
+<div className="bg-[url('/bgImage.jpg')] bg-cover bg-no-repeat bg-center h-100% w-full">
+
       <Toaster />
       <Routes>
         <Route path='/' element={authUser?<HomePage/> : <Navigate to="/login" />}/>
